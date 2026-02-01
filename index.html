@@ -26,7 +26,7 @@
                         Services <i class="fas fa-chevron-down ml-1 text-xs"></i>
                     </a>
 
-                    <div class="absolute left-0 mt-3 w-56 bg-white/90 backdrop-blur-lg shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border border-white/40">
+                    <div class="absolute left-0 mt-3 w-56 bg-white shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                         <div class="py-2">
                             <a href="services/hanging-doors.html" class="block px-4 py-2 text-[#5A3E2B] hover:bg-[#F5F5DC]">Hanging Doors</a>
                             <a href="services/ceilings.html" class="block px-4 py-2 text-[#5A3E2B] hover:bg-[#F5F5DC]">Ceilings</a>
@@ -71,46 +71,29 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden">
-        <div class="mx-4 mt-4 rounded-2xl bg-white/60 backdrop-blur-xl border border-white/40 shadow-2xl">
+    <div id="mobile-menu" class="hidden md:hidden bg-[#F5F5DC] border-t">
+        <div class="px-4 pt-4 pb-6 space-y-2">
+            <a href="about.html" class="block px-3 py-2 text-[#5A3E2B] font-semibold hover:bg-white rounded">About</a>
 
-            <!-- Home -->
-            <div class="px-4 pt-5 pb-3 border-b border-white/40">
-                <a href="index.html" class="block text-lg font-bold text-[#8B4513]">
-                    Home
-                </a>
-                <p class="text-sm text-[#654321]">Africon Carpentry Solutions</p>
+            <button onclick="toggleServices()" class="w-full flex justify-between items-center px-3 py-2 text-[#5A3E2B] font-semibold hover:bg-white rounded">
+                Services <i class="fas fa-chevron-down"></i>
+            </button>
+
+            <div id="services-dropdown" class="hidden pl-4 space-y-1">
+                <a href="services/hanging-doors.html" class="block px-3 py-2 hover:bg-white rounded">Hanging Doors</a>
+                <a href="services/ceilings.html" class="block px-3 py-2 hover:bg-white rounded">Ceilings</a>
+                <a href="services/decking.html" class="block px-3 py-2 hover:bg-white rounded">Decking</a>
+                <a href="services/skirtings.html" class="block px-3 py-2 hover:bg-white rounded">Skirtings</a>
+                <a href="services/pine-flooring.html" class="block px-3 py-2 hover:bg-white rounded">Pine Flooring</a>
+                <a href="services/roofing.html" class="block px-3 py-2 hover:bg-white rounded">Roofing & Replacements</a>
+                <a href="services/fencing.html" class="block px-3 py-2 hover:bg-white rounded">Fencing</a>
+                <a href="services/dry-walls.html" class="block px-3 py-2 hover:bg-white rounded">Dry Walls</a>
+                <a href="services/wood-housing.html" class="block px-3 py-2 hover:bg-white rounded">Wood Housing</a>
+                <a href="services/steps-landing.html" class="block px-3 py-2 hover:bg-white rounded">Steps with Landing</a>
             </div>
 
-            <div class="px-4 py-4 space-y-2">
-                <a href="about.html" class="block px-3 py-2 text-[#5A3E2B] font-semibold hover:bg-white/70 rounded-lg">
-                    About
-                </a>
-
-                <button onclick="toggleServices()" class="w-full flex justify-between items-center px-3 py-2 text-[#5A3E2B] font-semibold hover:bg-white/70 rounded-lg">
-                    Services <i class="fas fa-chevron-down text-sm"></i>
-                </button>
-
-                <div id="services-dropdown" class="hidden pl-4 space-y-1">
-                    <a href="services/hanging-doors.html" class="block px-3 py-2 hover:bg-white/70 rounded-lg">Hanging Doors</a>
-                    <a href="services/ceilings.html" class="block px-3 py-2 hover:bg-white/70 rounded-lg">Ceilings</a>
-                    <a href="services/decking.html" class="block px-3 py-2 hover:bg-white/70 rounded-lg">Decking</a>
-                    <a href="services/skirtings.html" class="block px-3 py-2 hover:bg-white/70 rounded-lg">Skirtings</a>
-                    <a href="services/pine-flooring.html" class="block px-3 py-2 hover:bg-white/70 rounded-lg">Pine Flooring</a>
-                    <a href="services/roofing.html" class="block px-3 py-2 hover:bg-white/70 rounded-lg">Roofing & Replacements</a>
-                    <a href="services/fencing.html" class="block px-3 py-2 hover:bg-white/70 rounded-lg">Fencing</a>
-                    <a href="services/dry-walls.html" class="block px-3 py-2 hover:bg-white/70 rounded-lg">Dry Walls</a>
-                    <a href="services/wood-housing.html" class="block px-3 py-2 hover:bg-white/70 rounded-lg">Wood Housing</a>
-                    <a href="services/steps-landing.html" class="block px-3 py-2 hover:bg-white/70 rounded-lg">Steps with Landing</a>
-                </div>
-
-                <a href="projects.html" class="block px-3 py-2 text-[#5A3E2B] font-semibold hover:bg-white/70 rounded-lg">
-                    Projects
-                </a>
-                <a href="contact.html" class="block px-3 py-2 text-[#5A3E2B] font-semibold hover:bg-white/70 rounded-lg">
-                    Contact
-                </a>
-            </div>
+            <a href="projects.html" class="block px-3 py-2 text-[#5A3E2B] font-semibold hover:bg-white rounded">Projects</a>
+            <a href="contact.html" class="block px-3 py-2 text-[#5A3E2B] font-semibold hover:bg-white rounded">Contact</a>
         </div>
     </div>
 </nav>
