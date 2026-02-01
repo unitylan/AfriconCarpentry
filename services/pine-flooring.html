@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pine Flooring - Africon Carpentry Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+
+</head>
+<body class="bg-white">
+<!-- Navigation -->
+<nav id="main-nav" class="fixed top-0 w-full z-50 transition-all duration-300 bg-white/70 backdrop-blur-md border-b border-[#F5F5DC]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-center h-20 gap-16">
+
+            <!-- Left Menu -->
+            <div class="hidden md:flex items-center gap-12">
+                <a href="../about.html" class="nav-link relative font-semibold text-[#5A3E2B] hover:text-[#8B4513]">
+                    About
+                </a>
+
+                <!-- Services Dropdown -->
+                <div class="relative group">
+                    <a href="../services.html" class="nav-link active relative font-semibold text-[#5A3E2B] hover:text-[#8B4513] flex items-center">
+                        Services <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                    </a>
+
+                    <div class="absolute left-0 mt-3 w-56 bg-white shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <div class="py-2">
+                            <a href="hanging-doors.html" class="block px-4 py-2 text-[#5A3E2B] hover:bg-[#F5F5DC]">Hanging Doors</a>
+                            <a href="ceilings.html" class="block px-4 py-2 text-[#5A3E2B] hover:bg-[#F5F5DC]">Ceilings</a>
+                            <a href="decking.html" class="block px-4 py-2 text-[#5A3E2B] hover:bg-[#F5F5DC]">Decking</a>
+                            <a href="skirtings.html" class="block px-4 py-2 text-[#5A3E2B] hover:bg-[#F5F5DC]">Skirtings</a>
+                            <a href="pine-flooring.html" class="block px-4 py-2 text-[#5A3E2B] hover:bg-[#F5F5DC]">Pine Flooring</a>
+                            <a href="roofing.html" class="block px-4 py-2 text-[#5A3E2B] hover:bg-[#F5F5DC]">Roofing & Replacements</a>
+                            <a href="fencing.html" class="block px-4 py-2 text-[#5A3E2B] hover:bg-[#F5F5DC]">Fencing</a>
+                            <a href="dry-walls.html" class="block px-4 py-2 text-[#5A3E2B] hover:bg-[#F5F5DC]">Dry Walls</a>
+                            <a href="wood-housing.html" class="block px-4 py-2 text-[#5A3E2B] hover:bg-[#F5F5DC]">Wood Housing</a>
+                            <a href="steps-landing.html" class="block px-4 py-2 text-[#5A3E2B] hover:bg-[#F5F5DC]">Steps with Landing</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Center Logo -->
+            <div class="flex-shrink-0">
+                <a href="../index.html">
+                    <img src="../images/logo.webp" alt="Africon Carpentry Solutions" class="h-40">
+                </a>
+            </div>
+
+            <!-- Right Menu -->
+            <div class="hidden md:flex items-center gap-12">
+                <a href="../projects.html" class="nav-link relative font-semibold text-[#5A3E2B] hover:text-[#8B4513]">
+                    Projects
+                </a>
+                <a href="../contact.html" class="nav-link relative font-semibold text-[#5A3E2B] hover:text-[#8B4513]">
+                    Contact
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden absolute right-4">
+                <button id="mobile-menu-btn" class="text-[#5A3E2B] focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#F5F5DC] border-t">
+        <div class="px-4 pt-4 pb-6 space-y-2">
+            <a href="../about.html" class="block px-3 py-2 text-[#5A3E2B] font-semibold hover:bg-white rounded">About</a>
+
+            <button onclick="toggleServices()" class="w-full flex justify-between items-center px-3 py-2 text-[#5A3E2B] font-semibold hover:bg-white rounded">
+                Services <i class="fas fa-chevron-down"></i>
+            </button>
+
+            <div id="services-dropdown" class="hidden pl-4 space-y-1">
+                <a href="hanging-doors.html" class="block px-3 py-2 hover:bg-white rounded">Hanging Doors</a>
+                <a href="ceilings.html" class="block px-3 py-2 hover:bg-white rounded">Ceilings</a>
+                <a href="decking.html" class="block px-3 py-2 hover:bg-white rounded">Decking</a>
+                <a href="skirtings.html" class="block px-3 py-2 hover:bg-white rounded">Skirtings</a>
+                <a href="pine-flooring.html" class="block px-3 py-2 hover:bg-white rounded">Pine Flooring</a>
+                <a href="roofing.html" class="block px-3 py-2 hover:bg-white rounded">Roofing & Replacements</a>
+                <a href="fencing.html" class="block px-3 py-2 hover:bg-white rounded">Fencing</a>
+                <a href="dry-walls.html" class="block px-3 py-2 hover:bg-white rounded">Dry Walls</a>
+                <a href="wood-housing.html" class="block px-3 py-2 hover:bg-white rounded">Wood Housing</a>
+                <a href="steps-landing.html" class="block px-3 py-2 hover:bg-white rounded">Steps with Landing</a>
+            </div>
+
+            <a href="../projects.html" class="block px-3 py-2 text-[#5A3E2B] font-semibold hover:bg-white rounded">Projects</a>
+            <a href="../contact.html" class="block px-3 py-2 text-[#5A3E2B] font-semibold hover:bg-white rounded">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<section 
+    class="relative h-[400px] flex items-center justify-center text-white bg-cover bg-center"
+    style="background-image: url('../images/flooring.jpg');"
+>
+    <!-- Beige Overlay -->
+    <div class="absolute inset-0 bg-[#F5F5DC]/80"></div>
+
+    <!-- Content -->
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-[#654321] mb-3">
+            Pine Flooring
+        </h1>
+        <p class="text-lg md:text-xl text-[#654321]/80">
+            High-quality pine flooring installation
+        </p>
+    </div>
+</section>
+
+    <!-- Service Content -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-12">
+                <div>
+                    <h2 class="text-3xl font-bold text-[#8B4513] mb-6">Premium Pine Flooring</h2>
+                    <p class="text-[#654321] mb-4 text-lg">
+                        Pine flooring brings warmth, character, and timeless elegance to any home. Our expert installation ensures your pine floors will be a beautiful and durable feature for years to come.
+                    </p>
+                    <p class="text-[#654321] mb-4 text-lg">
+                        We work with high-grade pine timber, carefully selected for its quality and appearance, and install it with precision to create stunning floors that enhance your living space.
+                    </p>
+                    <ul class="space-y-3 text-[#654321]">
+                        <li><i class="fas fa-check text-[#8B4513] mr-2"></i> High-grade pine timber selection</li>
+                        <li><i class="fas fa-check text-[#8B4513] mr-2"></i> Professional installation techniques</li>
+                        <li><i class="fas fa-check text-[#8B4513] mr-2"></i> Sanding and finishing services</li>
+                        <li><i class="fas fa-check text-[#8B4513] mr-2"></i> Staining and protective treatments</li>
+                    </ul>
+                </div>
+                <div class="bg-[#F5F5DC] p-8 rounded-lg">
+                    <div class="h-64 bg-[#8B4513] flex items-center justify-center rounded">
+                        <i class="fas fa-th text-8xl text-white opacity-50"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-[#F5F5DC] p-8 rounded-lg mb-12">
+                <h3 class="text-2xl font-semibold text-[#654321] mb-4">Flooring Services</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-semibold text-[#8B4513] mb-2"><i class="fas fa-tree mr-2"></i>Material Selection</h4>
+                        <p class="text-[#654321]">Premium pine timber in various grades and finishes</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-[#8B4513] mb-2"><i class="fas fa-tools mr-2"></i>Installation</h4>
+                        <p class="text-[#654321]">Expert laying with proper subfloor preparation</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-[#8B4513] mb-2"><i class="fas fa-sandpaper mr-2"></i>Sanding</h4>
+                        <p class="text-[#654321]">Professional sanding for smooth, even surfaces</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-[#8B4513] mb-2"><i class="fas fa-paint-brush mr-2"></i>Finishing</h4>
+                        <p class="text-[#654321]">Staining, varnishing, and protective coatings</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="../contact.html" class="bg-[#8B4513] text-white px-8 py-3 rounded-lg hover:bg-[#654321] transition duration-300 font-semibold inline-block">
+                    Get a Quote <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white text-gray-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+            <div class="grid md:grid-cols-4 gap-12">
+    
+                <!-- COLUMN 1: Logo + Description + Social -->
+                <div class="flex flex-col items-start">
+                    <img src="../images/logo.webp" alt="Africon Carpentry Solutions Logo" class="w-40 md:w-48 max-h-32 object-cover ">
+                    <p class="mb-4 max-w-xs">
+                        Quality carpentry services you can trust. We craft every project with precision and care.
+                    </p>
+                    <div class="flex space-x-4 mt-2">
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-[#8B4513] hover:text-white hover:border-[#8B4513] transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-[#8B4513] hover:text-white hover:border-[#8B4513] transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-[#8B4513] hover:text-white hover:border-[#8B4513] transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-[#8B4513] hover:text-white hover:border-[#8B4513] transition"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+    
+                <!-- COLUMN 2: Quick Links -->
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../about.html" class="hover:text-gray-600 transition">About Us</a></li>
+                        <li><a href="../services.html" class="hover:text-gray-600 transition">Services</a></li>
+                        <li><a href="../projects.html" class="hover:text-gray-600 transition">Projects</a></li>
+                        <li><a href="../contact.html" class="hover:text-gray-600 transition">Contact</a></li>
+                    </ul>
+                </div>
+    
+                <!-- COLUMN 3: Projects -->
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Projects</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../projects.html#residential" class="hover:text-gray-600 transition">Residential</a></li>
+                        <li><a href="../projects.html#commercial" class="hover:text-gray-600 transition">Commercial</a></li>
+                        <li><a href="../about.html" class="hover:text-gray-600 transition">Custom Projects</a></li>
+                        <li><a href="../projects.html" class="hover:text-gray-600 transition">All Projects</a></li>
+                    </ul>
+                </div>
+    
+                <!-- COLUMN 4: Contact -->
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Contact</h4>
+                    <p class="mb-2">
+                        <i class="fas fa-phone mr-2"></i> 079 470 2549/064 403 8546
+                    </p>
+                    <p class="mb-2">
+                        <i class="fas fa-envelope mr-2"></i> kubumartin240@gmail.com
+                    </p>
+                    <p>
+                        <i class="fas fa-map-marker-alt mr-2"></i> Western Cape, South Africa
+                    </p>
+                </div>
+    
+            </div>
+    
+            <!-- Bottom Copyright -->
+            <div class="border-t border-gray-200 mt-12 pt-6 text-center text-gray-500 text-sm">
+                &copy; 2026 Africon Carpentry Solutions. All rights reserved.
+            </div>
+    
+        </div>
+    </footer>
+        
+<script src="../script.js"></script>
+</body>
+</html>
+
+
+

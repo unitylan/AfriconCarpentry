@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Africon Carpentry Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-white">
+<!-- Navigation -->
+<nav id="main-nav" class="fixed top-0 w-full z-50 transition-all duration-300 bg-white/70 backdrop-blur-md border-b border-[#F5F5DC]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-center h-20 gap-16">
+
+            <!-- Left Menu -->
+            <div class="hidden md:flex items-center gap-12">
+                <a href="about.html" class="nav-link relative font-semibold text-[#5A3E2B] hover:text-[#8B4513]">
+                    About
+                </a>
+
+                <!-- Services Dropdown -->
+                <div class="relative group">
+                    <a href="services.html" class="nav-link relative font-semibold text-[#5A3E2B] hover:text-[#8B4513] flex items-center">
+                        Services <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                    </a>
+
+                    <div class="absolute left-0 mt-3 w-56 bg-white shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <div class="py-2">
+                            <a href="services/hanging-doors.html" class="block px-4 py-2 text-[#5A3E2B] hover:bg-[#F5F5DC]">Hanging Doors</a>
+                            <a href="services/ceilings.html" class="block px-4 py-2 text-[#5A3E2B] hover:bg-[#F5F5DC]">Ceilings</a>
+                            <a href="services/decking.html" class="block px-4 py-2 text-[#5A3E2B] hover:bg-[#F5F5DC]">Decking</a>
+                            <a href="services/skirtings.html" class="block px-4 py-2 text-[#5A3E2B] hover:bg-[#F5F5DC]">Skirtings</a>
+                            <a href="services/pine-flooring.html" class="block px-4 py-2 text-[#5A3E2B] hover:bg-[#F5F5DC]">Pine Flooring</a>
+                            <a href="services/roofing.html" class="block px-4 py-2 text-[#5A3E2B] hover:bg-[#F5F5DC]">Roofing & Replacements</a>
+                            <a href="services/fencing.html" class="block px-4 py-2 text-[#5A3E2B] hover:bg-[#F5F5DC]">Fencing</a>
+                            <a href="services/dry-walls.html" class="block px-4 py-2 text-[#5A3E2B] hover:bg-[#F5F5DC]">Dry Walls</a>
+                            <a href="services/wood-housing.html" class="block px-4 py-2 text-[#5A3E2B] hover:bg-[#F5F5DC]">Wood Housing</a>
+                            <a href="services/steps-landing.html" class="block px-4 py-2 text-[#5A3E2B] hover:bg-[#F5F5DC]">Steps with Landing</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Center Logo -->
+            <div class="flex-shrink-0">
+                <a href="index.html">
+                    <img src="images/logo.webp" alt="Africon Carpentry Solutions" class="h-40">
+                </a>
+            </div>
+
+            <!-- Right Menu -->
+            <div class="hidden md:flex items-center gap-12">
+                <a href="projects.html" class="nav-link relative font-semibold text-[#5A3E2B] hover:text-[#8B4513]">
+                    Projects
+                </a>
+                <a href="contact.html" class="nav-link active relative font-semibold text-[#5A3E2B] hover:text-[#8B4513]">
+                    Contact
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden absolute right-4">
+                <button id="mobile-menu-btn" class="text-[#5A3E2B] focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#F5F5DC] border-t">
+        <div class="px-4 pt-4 pb-6 space-y-2">
+            <a href="about.html" class="block px-3 py-2 text-[#5A3E2B] font-semibold hover:bg-white rounded">About</a>
+
+            <button onclick="toggleServices()" class="w-full flex justify-between items-center px-3 py-2 text-[#5A3E2B] font-semibold hover:bg-white rounded">
+                Services <i class="fas fa-chevron-down"></i>
+            </button>
+
+            <div id="services-dropdown" class="hidden pl-4 space-y-1">
+                <a href="services/hanging-doors.html" class="block px-3 py-2 hover:bg-white rounded">Hanging Doors</a>
+                <a href="services/ceilings.html" class="block px-3 py-2 hover:bg-white rounded">Ceilings</a>
+                <a href="services/decking.html" class="block px-3 py-2 hover:bg-white rounded">Decking</a>
+                <a href="services/skirtings.html" class="block px-3 py-2 hover:bg-white rounded">Skirtings</a>
+                <a href="services/pine-flooring.html" class="block px-3 py-2 hover:bg-white rounded">Pine Flooring</a>
+                <a href="services/roofing.html" class="block px-3 py-2 hover:bg-white rounded">Roofing & Replacements</a>
+                <a href="services/fencing.html" class="block px-3 py-2 hover:bg-white rounded">Fencing</a>
+                <a href="services/dry-walls.html" class="block px-3 py-2 hover:bg-white rounded">Dry Walls</a>
+                <a href="services/wood-housing.html" class="block px-3 py-2 hover:bg-white rounded">Wood Housing</a>
+                <a href="services/steps-landing.html" class="block px-3 py-2 hover:bg-white rounded">Steps with Landing</a>
+            </div>
+
+            <a href="projects.html" class="block px-3 py-2 text-[#5A3E2B] font-semibold hover:bg-white rounded">Projects</a>
+            <a href="contact.html" class="block px-3 py-2 text-[#5A3E2B] font-semibold hover:bg-white rounded">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<section 
+    class="relative h-[400px] flex items-center justify-center text-white bg-cover bg-center"
+    style="background-image: url('images/hero2.2.jpg');"
+>
+    <!-- Beige Overlay -->
+    <div class="absolute inset-0 bg-[#F5F5DC]/80"></div>
+
+    <!-- Content -->
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-[#654321] mb-3">
+            Contact Us
+        </h1>
+        <p class="text-lg md:text-xl text-[#654321]/80">
+            Get in touch with us for a free quote
+        </p>
+    </div>
+</section>
+
+    <!-- Contact Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div>
+                    <h2 class="text-3xl font-bold text-[#8B4513] mb-6">Send us a Message</h2>
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-[#654321] font-semibold mb-2">Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-3 border-2 border-[#F5F5DC] rounded-lg focus:border-[#8B4513] focus:outline-none" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-[#654321] font-semibold mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 border-2 border-[#F5F5DC] rounded-lg focus:border-[#8B4513] focus:outline-none" required>
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-[#654321] font-semibold mb-2">Phone</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border-2 border-[#F5F5DC] rounded-lg focus:border-[#8B4513] focus:outline-none">
+                        </div>
+                        <div>
+                            <label for="service" class="block text-[#654321] font-semibold mb-2">Service Interested In</label>
+                            <select id="service" name="service" class="w-full px-4 py-3 border-2 border-[#F5F5DC] rounded-lg focus:border-[#8B4513] focus:outline-none">
+                                <option value="">Select a service</option>
+                                <option value="hanging-doors">Hanging Doors</option>
+                                <option value="ceilings">Ceilings</option>
+                                <option value="decking">Decking</option>
+                                <option value="skirtings">Skirtings</option>
+                                <option value="pine-flooring">Pine Flooring</option>
+                                <option value="roofing">Roofing & Replacements</option>
+                                <option value="fencing">Fencing</option>
+                                <option value="dry-walls">Dry Walls</option>
+                                <option value="wood-housing">Wood Housing</option>
+                                <option value="steps-landing">Steps with Landing</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-[#654321] font-semibold mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border-2 border-[#F5F5DC] rounded-lg focus:border-[#8B4513] focus:outline-none" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-[#8B4513] text-white px-8 py-3 rounded-lg hover:bg-[#654321] transition duration-300 font-semibold">
+                            Send Message <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div>
+                    <h2 class="text-3xl font-bold text-[#8B4513] mb-6">Get in Touch</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-[#F5F5DC] p-4 rounded-lg mr-4">
+                                <i class="fas fa-phone text-2xl text-[#8B4513]"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-[#654321] mb-2">Phone</h3>
+                                <p class="text-[#654321]">Call us for a free quote</p>
+                                <p class="text-[#8B4513] font-semibold">079 470 2549/064 403 8546</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="bg-[#F5F5DC] p-4 rounded-lg mr-4">
+                                <i class="fas fa-envelope text-2xl text-[#8B4513]"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-[#654321] mb-2">Email</h3>
+                                <p class="text-[#654321]">Send us an email anytime</p>
+                                <p class="text-[#8B4513] font-semibold">kubumartin240@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="bg-[#F5F5DC] p-4 rounded-lg mr-4">
+                                <i class="fas fa-clock text-2xl text-[#8B4513]"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-[#654321] mb-2">Business Hours</h3>
+                                <p class="text-[#654321]">Monday - Friday: 8:00 AM - 5:00 PM</p>
+                                <p class="text-[#654321]">Saturday: 9:00 AM - 1:00 PM</p>
+                                <p class="text-[#654321]">Sunday: Closed</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-[#F5F5DC] p-6 rounded-lg mt-8">
+                            <h3 class="text-xl font-semibold text-[#654321] mb-3">Why Choose Us?</h3>
+                            <ul class="space-y-2 text-[#654321]">
+                                <li><i class="fas fa-check text-[#8B4513] mr-2"></i> Free quotes and consultations</li>
+                                <li><i class="fas fa-check text-[#8B4513] mr-2"></i> Quality guaranteed workmanship</li>
+                                <li><i class="fas fa-check text-[#8B4513] mr-2"></i> Competitive pricing</li>
+                                <li><i class="fas fa-check text-[#8B4513] mr-2"></i> Timely project completion</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Footer -->
+<footer class="bg-white text-gray-800 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="grid md:grid-cols-4 gap-12">
+
+            <!-- COLUMN 1: Logo + Description + Social -->
+            <div class="flex flex-col items-start">
+                <img src="images/logo.webp" alt="Africon Carpentry Solutions Logo" class="w-40 md:w-48 max-h-32 object-cover ">
+                <p class="mb-4 max-w-xs">
+                    Quality carpentry services you can trust. We craft every project with precision and care.
+                </p>
+                <div class="flex space-x-4 mt-2">
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-[#8B4513] hover:text-white hover:border-[#8B4513] transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-[#8B4513] hover:text-white hover:border-[#8B4513] transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-[#8B4513] hover:text-white hover:border-[#8B4513] transition"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-[#8B4513] hover:text-white hover:border-[#8B4513] transition"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <!-- COLUMN 2: Quick Links -->
+            <div>
+                <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="about.html" class="hover:text-gray-600 transition">About Us</a></li>
+                    <li><a href="services.html" class="hover:text-gray-600 transition">Services</a></li>
+                    <li><a href="projects.html" class="hover:text-gray-600 transition">Projects</a></li>
+                    <li><a href="contact.html" class="hover:text-gray-600 transition">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- COLUMN 3: Projects -->
+            <div>
+                <h4 class="font-semibold text-lg mb-4">Projects</h4>
+                <ul class="space-y-2">
+                    <li><a href="projects.html#residential" class="hover:text-gray-600 transition">Residential</a></li>
+                    <li><a href="projects.html#commercial" class="hover:text-gray-600 transition">Commercial</a></li>
+                    <li><a href="projects.html#custom" class="hover:text-gray-600 transition">Custom Projects</a></li>
+                    <li><a href="projects.html" class="hover:text-gray-600 transition">All Projects</a></li>
+                </ul>
+            </div>
+
+            <!-- COLUMN 4: Contact -->
+            <div>
+                <h4 class="font-semibold text-lg mb-4">Contact</h4>
+                <p class="mb-2">
+                    <i class="fas fa-phone mr-2"></i> 079 470 2549/064 403 8546
+                </p>
+                <p class="mb-2">
+                    <i class="fas fa-envelope mr-2"></i> kubumartin240@gmail.com
+                </p>
+                <p>
+                    <i class="fas fa-map-marker-alt mr-2"></i> Western Cape, South Africa
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Bottom Copyright -->
+        <div class="border-t border-gray-200 mt-12 pt-6 text-center text-gray-500 text-sm">
+            &copy; 2026 Africon Carpentry Solutions. All rights reserved.
+        </div>
+
+    </div>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+

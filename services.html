@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Africon Carpentry Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-white">
+<!-- Navigation -->
+<nav id="main-nav" class="fixed top-0 w-full z-50 transition-all duration-300 bg-white/70 backdrop-blur-md border-b border-[#F5F5DC]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-center h-20 gap-16">
+
+            <!-- Left Menu -->
+            <div class="hidden md:flex items-center gap-12">
+                <a href="about.html" class="nav-link relative font-semibold text-[#5A3E2B] hover:text-[#8B4513]">
+                    About
+                </a>
+
+                <!-- Services Dropdown -->
+                <div class="relative group">
+                    <a href="services.html" class="nav-link active relative font-semibold text-[#5A3E2B] hover:text-[#8B4513] flex items-center">
+                        Services <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                    </a>
+
+                    <div class="absolute left-0 mt-3 w-56 bg-white shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <div class="py-2">
+                            <a href="services/hanging-doors.html" class="block px-4 py-2 text-[#5A3E2B] hover:bg-[#F5F5DC]">Hanging Doors</a>
+                            <a href="services/ceilings.html" class="block px-4 py-2 text-[#5A3E2B] hover:bg-[#F5F5DC]">Ceilings</a>
+                            <a href="services/decking.html" class="block px-4 py-2 text-[#5A3E2B] hover:bg-[#F5F5DC]">Decking</a>
+                            <a href="services/skirtings.html" class="block px-4 py-2 text-[#5A3E2B] hover:bg-[#F5F5DC]">Skirtings</a>
+                            <a href="services/pine-flooring.html" class="block px-4 py-2 text-[#5A3E2B] hover:bg-[#F5F5DC]">Pine Flooring</a>
+                            <a href="services/roofing.html" class="block px-4 py-2 text-[#5A3E2B] hover:bg-[#F5F5DC]">Roofing & Replacements</a>
+                            <a href="services/fencing.html" class="block px-4 py-2 text-[#5A3E2B] hover:bg-[#F5F5DC]">Fencing</a>
+                            <a href="services/dry-walls.html" class="block px-4 py-2 text-[#5A3E2B] hover:bg-[#F5F5DC]">Dry Walls</a>
+                            <a href="services/wood-housing.html" class="block px-4 py-2 text-[#5A3E2B] hover:bg-[#F5F5DC]">Wood Housing</a>
+                            <a href="services/steps-landing.html" class="block px-4 py-2 text-[#5A3E2B] hover:bg-[#F5F5DC]">Steps with Landing</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Center Logo -->
+            <div class="flex-shrink-0">
+                <a href="index.html">
+                    <img src="images/logo.webp" alt="Africon Carpentry Solutions" class="h-40">
+                </a>
+            </div>
+
+            <!-- Right Menu -->
+            <div class="hidden md:flex items-center gap-12">
+                <a href="projects.html" class="nav-link relative font-semibold text-[#5A3E2B] hover:text-[#8B4513]">
+                    Projects
+                </a>
+                <a href="contact.html" class="nav-link relative font-semibold text-[#5A3E2B] hover:text-[#8B4513]">
+                    Contact
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden absolute right-4">
+                <button id="mobile-menu-btn" class="text-[#5A3E2B] focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#F5F5DC] border-t">
+        <div class="px-4 pt-4 pb-6 space-y-2">
+            <a href="about.html" class="block px-3 py-2 text-[#5A3E2B] font-semibold hover:bg-white rounded">About</a>
+
+            <button onclick="toggleServices()" class="w-full flex justify-between items-center px-3 py-2 text-[#5A3E2B] font-semibold hover:bg-white rounded">
+                Services <i class="fas fa-chevron-down"></i>
+            </button>
+
+            <div id="services-dropdown" class="hidden pl-4 space-y-1">
+                <a href="services/hanging-doors.html" class="block px-3 py-2 hover:bg-white rounded">Hanging Doors</a>
+                <a href="services/ceilings.html" class="block px-3 py-2 hover:bg-white rounded">Ceilings</a>
+                <a href="services/decking.html" class="block px-3 py-2 hover:bg-white rounded">Decking</a>
+                <a href="services/skirtings.html" class="block px-3 py-2 hover:bg-white rounded">Skirtings</a>
+                <a href="services/pine-flooring.html" class="block px-3 py-2 hover:bg-white rounded">Pine Flooring</a>
+                <a href="services/roofing.html" class="block px-3 py-2 hover:bg-white rounded">Roofing & Replacements</a>
+                <a href="services/fencing.html" class="block px-3 py-2 hover:bg-white rounded">Fencing</a>
+                <a href="services/dry-walls.html" class="block px-3 py-2 hover:bg-white rounded">Dry Walls</a>
+                <a href="services/wood-housing.html" class="block px-3 py-2 hover:bg-white rounded">Wood Housing</a>
+                <a href="services/steps-landing.html" class="block px-3 py-2 hover:bg-white rounded">Steps with Landing</a>
+            </div>
+
+            <a href="projects.html" class="block px-3 py-2 text-[#5A3E2B] font-semibold hover:bg-white rounded">Projects</a>
+            <a href="contact.html" class="block px-3 py-2 text-[#5A3E2B] font-semibold hover:bg-white rounded">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<section 
+    class="relative h-[400px] flex items-center justify-center text-white bg-cover bg-center"
+    style="background-image: url('images/hero5.jpg');"
+>
+    <!-- Beige Overlay -->
+    <div class="absolute inset-0 bg-[#F5F5DC]/80"></div>
+
+    <!-- Content -->
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-[#654321] mb-3">
+            Our Services
+        </h1>
+        <p class="text-lg md:text-xl text-[#654321]/80">
+            Our services are designed to meet your needs and exceed your expectations.
+        </p>
+    </div>
+</section>
+
+<!-- Services Grid -->
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+  
+        <!-- Hanging Doors -->
+        <a href="services/hanging-doors.html"
+           class="group relative bg-white border border-gray-200 rounded-xl p-8 pl-12 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+          <span class="absolute left-0 top-0 h-full w-2 rounded-l-xl bg-gradient-to-b from-[#8B4513] to-[#654321]"></span>
+  
+          <div class="w-14 h-14 flex items-center justify-center rounded-full bg-[#F5F5DC] mb-6">
+            <i class="fas fa-door-open text-2xl text-[#8B4513]"></i>
+          </div>
+  
+          <h3 class="text-2xl font-semibold text-gray-800 mb-3">Hanging Doors</h3>
+          <p class="text-gray-600">
+            Precision door installation for interior and exterior doors.
+          </p>
+  
+          <span class="inline-flex items-center mt-6 text-[#8B4513] font-semibold">
+            Learn More <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+          </span>
+        </a>
+  
+        <!-- Ceilings -->
+        <a href="services/ceilings.html"
+           class="group relative bg-white border border-gray-200 rounded-xl p-8 pl-12 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+          <span class="absolute left-0 top-0 h-full w-2 rounded-l-xl bg-gradient-to-b from-[#8B4513] to-[#654321]"></span>
+  
+          <div class="w-14 h-14 flex items-center justify-center rounded-full bg-[#F5F5DC] mb-6">
+            <i class="fas fa-building text-2xl text-[#8B4513]"></i>
+          </div>
+  
+          <h3 class="text-2xl font-semibold text-gray-800 mb-3">Ceilings</h3>
+          <p class="text-gray-600">
+            Expert ceiling installation and professional repairs.
+          </p>
+  
+          <span class="inline-flex items-center mt-6 text-[#8B4513] font-semibold">
+            Learn More <i class="fas fa-arrow-right ml-2"></i>
+          </span>
+        </a>
+  
+        <!-- Decking -->
+        <a href="services/decking.html"
+           class="group relative bg-white border border-gray-200 rounded-xl p-8 pl-12 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+          <span class="absolute left-0 top-0 h-full w-2 rounded-l-xl bg-gradient-to-b from-[#8B4513] to-[#654321]"></span>
+  
+          <div class="w-14 h-14 flex items-center justify-center rounded-full bg-[#F5F5DC] mb-6">
+            <i class="fas fa-th-large text-2xl text-[#8B4513]"></i>
+          </div>
+  
+          <h3 class="text-2xl font-semibold text-gray-800 mb-3">Decking</h3>
+          <p class="text-gray-600">
+            Durable and elegant decking for outdoor living spaces.
+          </p>
+  
+          <span class="inline-flex items-center mt-6 text-[#8B4513] font-semibold">
+            Learn More <i class="fas fa-arrow-right ml-2"></i>
+          </span>
+        </a>
+  
+        <!-- Skirtings -->
+        <a href="services/skirtings.html"
+           class="group relative bg-white border border-gray-200 rounded-xl p-8 pl-12 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+          <span class="absolute left-0 top-0 h-full w-2 rounded-l-xl bg-gradient-to-b from-[#8B4513] to-[#654321]"></span>
+  
+          <div class="w-14 h-14 flex items-center justify-center rounded-full bg-[#F5F5DC] mb-6">
+            <i class="fas fa-border-style text-2xl text-[#8B4513]"></i>
+          </div>
+  
+          <h3 class="text-2xl font-semibold text-gray-800 mb-3">Skirtings</h3>
+          <p class="text-gray-600">
+            Clean skirting board installation for a polished finish.
+          </p>
+  
+          <span class="inline-flex items-center mt-6 text-[#8B4513] font-semibold">
+            Learn More <i class="fas fa-arrow-right ml-2"></i>
+          </span>
+        </a>
+  
+        <!-- Pine Flooring -->
+        <a href="services/pine-flooring.html"
+           class="group relative bg-white border border-gray-200 rounded-xl p-8 pl-12 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+          <span class="absolute left-0 top-0 h-full w-2 rounded-l-xl bg-gradient-to-b from-[#8B4513] to-[#654321]"></span>
+  
+          <div class="w-14 h-14 flex items-center justify-center rounded-full bg-[#F5F5DC] mb-6">
+            <i class="fas fa-th text-2xl text-[#8B4513]"></i>
+          </div>
+  
+          <h3 class="text-2xl font-semibold text-gray-800 mb-3">Pine Flooring</h3>
+          <p class="text-gray-600">
+            Timeless pine flooring installed with precision.
+          </p>
+  
+          <span class="inline-flex items-center mt-6 text-[#8B4513] font-semibold">
+            Learn More <i class="fas fa-arrow-right ml-2"></i>
+          </span>
+        </a>
+  
+        <!-- Roofing -->
+        <a href="services/roofing.html"
+           class="group relative bg-white border border-gray-200 rounded-xl p-8 pl-12 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+          <span class="absolute left-0 top-0 h-full w-2 rounded-l-xl bg-gradient-to-b from-[#8B4513] to-[#654321]"></span>
+  
+          <div class="w-14 h-14 flex items-center justify-center rounded-full bg-[#F5F5DC] mb-6">
+            <i class="fas fa-home text-2xl text-[#8B4513]"></i>
+          </div>
+  
+          <h3 class="text-2xl font-semibold text-gray-800 mb-3">Roofing & Replacements</h3>
+          <p class="text-gray-600">
+            Reliable roofing repairs and full replacements.
+          </p>
+  
+          <span class="inline-flex items-center mt-6 text-[#8B4513] font-semibold">
+            Learn More <i class="fas fa-arrow-right ml-2"></i>
+          </span>
+        </a>
+  
+        <!-- Fencing -->
+        <a href="services/fencing.html"
+           class="group relative bg-white border border-gray-200 rounded-xl p-8 pl-12 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+          <span class="absolute left-0 top-0 h-full w-2 rounded-l-xl bg-gradient-to-b from-[#8B4513] to-[#654321]"></span>
+  
+          <div class="w-14 h-14 flex items-center justify-center rounded-full bg-[#F5F5DC] mb-6">
+            <i class="fas fa-border-all text-2xl text-[#8B4513]"></i>
+          </div>
+  
+          <h3 class="text-2xl font-semibold text-gray-800 mb-3">Fencing</h3>
+          <p class="text-gray-600">
+            Custom fencing for privacy, safety, and style.
+          </p>
+  
+          <span class="inline-flex items-center mt-6 text-[#8B4513] font-semibold">
+            Learn More <i class="fas fa-arrow-right ml-2"></i>
+          </span>
+        </a>
+  
+        <!-- Dry Walls -->
+        <a href="services/dry-walls.html"
+           class="group relative bg-white border border-gray-200 rounded-xl p-8 pl-12 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+          <span class="absolute left-0 top-0 h-full w-2 rounded-l-xl bg-gradient-to-b from-[#8B4513] to-[#654321]"></span>
+  
+          <div class="w-14 h-14 flex items-center justify-center rounded-full bg-[#F5F5DC] mb-6">
+            <i class="fas fa-square text-2xl text-[#8B4513]"></i>
+          </div>
+  
+          <h3 class="text-2xl font-semibold text-gray-800 mb-3">Dry Walls</h3>
+          <p class="text-gray-600">
+            Professional drywall installation and finishing.
+          </p>
+  
+          <span class="inline-flex items-center mt-6 text-[#8B4513] font-semibold">
+            Learn More <i class="fas fa-arrow-right ml-2"></i>
+          </span>
+        </a>
+  
+        <!-- Wood Housing -->
+        <a href="services/wood-housing.html"
+           class="group relative bg-white border border-gray-200 rounded-xl p-8 pl-12 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+          <span class="absolute left-0 top-0 h-full w-2 rounded-l-xl bg-gradient-to-b from-[#8B4513] to-[#654321]"></span>
+  
+          <div class="w-14 h-14 flex items-center justify-center rounded-full bg-[#F5F5DC] mb-6">
+            <i class="fas fa-cube text-2xl text-[#8B4513]"></i>
+          </div>
+  
+          <h3 class="text-2xl font-semibold text-gray-800 mb-3">Wood Housing</h3>
+          <p class="text-gray-600">
+            Structural timber housing and custom builds.
+          </p>
+  
+          <span class="inline-flex items-center mt-6 text-[#8B4513] font-semibold">
+            Learn More <i class="fas fa-arrow-right ml-2"></i>
+          </span>
+        </a>
+  
+        <!-- Steps -->
+        <a href="services/steps-landing.html"
+           class="group relative bg-white border border-gray-200 rounded-xl p-8 pl-12 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+          <span class="absolute left-0 top-0 h-full w-2 rounded-l-xl bg-gradient-to-b from-[#8B4513] to-[#654321]"></span>
+  
+          <div class="w-14 h-14 flex items-center justify-center rounded-full bg-[#F5F5DC] mb-6">
+            <i class="fas fa-stairs text-2xl text-[#8B4513]"></i>
+          </div>
+  
+          <h3 class="text-2xl font-semibold text-gray-800 mb-3">Steps with Landing</h3>
+          <p class="text-gray-600">
+            Custom staircases built for strength and elegance.
+          </p>
+  
+          <span class="inline-flex items-center mt-6 text-[#8B4513] font-semibold">
+            Learn More <i class="fas fa-arrow-right ml-2"></i>
+          </span>
+        </a>
+  
+      </div>
+  
+    </div>
+  </section>
+    
+<!-- CTA Section -->
+<section class="relative bg-[#F5F5DC] overflow-hidden rounded-t-[3rem] h-[400px]">
+
+    <!-- Subtle Wood Grain Overlay -->
+    <div class="absolute inset-0 bg-[url('images/wood-grain.jpg')] opacity-[0.05] pointer-events-none"></div>
+
+    <!-- Content Container -->
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+        <div class="flex flex-col md:flex-row h-full items-center justify-center gap-10 md:gap-16">
+
+            <!-- LEFT: Image Card -->
+            <div class="w-full md:w-1/2">
+                <div class="relative rounded-2xl overflow-hidden shadow-xl group">
+                    <img 
+                        src="images/CTA.jpg" 
+                        alt="Professional Carpentry Services"
+                        class="w-full h-[260px] sm:h-[300px] object-cover transition-transform duration-500 group-hover:scale-105"
+                    >
+
+                    <!-- Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+
+                </div>
+            </div>
+
+            <!-- RIGHT: CTA Text -->
+            <div class="w-full md:w-1/2 text-center md:text-right space-y-4">
+                <h2 class="text-2xl sm:text-3xl font-bold text-[#8B4513] drop-shadow-lg">
+                    Let’s Build Something Exceptional
+                </h2>
+
+                <p class="text-gray-800 text-sm sm:text-base max-w-md mx-auto md:mx-0 md:ml-auto">
+                    Explore our full range of carpentry services — designed, built, and installed with precision,
+                    durability, and timeless style.
+                </p>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-white text-gray-800 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="grid md:grid-cols-4 gap-12">
+
+            <!-- COLUMN 1: Logo + Description + Social -->
+            <div class="flex flex-col items-start">
+                <img src="images/logo.webp" alt="Africon Carpentry Solutions Logo" class="w-40 md:w-48 max-h-32 object-cover ">
+                <p class="mb-4 max-w-xs">
+                    Quality carpentry services you can trust. We craft every project with precision and care.
+                </p>
+                <div class="flex space-x-4 mt-2">
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-[#8B4513] hover:text-white hover:border-[#8B4513] transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-[#8B4513] hover:text-white hover:border-[#8B4513] transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-[#8B4513] hover:text-white hover:border-[#8B4513] transition"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 hover:bg-[#8B4513] hover:text-white hover:border-[#8B4513] transition"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <!-- COLUMN 2: Quick Links -->
+            <div>
+                <h4 class="font-semibold text-lg mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="about.html" class="hover:text-gray-600 transition">About Us</a></li>
+                    <li><a href="services.html" class="hover:text-gray-600 transition">Services</a></li>
+                    <li><a href="projects.html" class="hover:text-gray-600 transition">Projects</a></li>
+                    <li><a href="contact.html" class="hover:text-gray-600 transition">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- COLUMN 3: Projects -->
+            <div>
+                <h4 class="font-semibold text-lg mb-4">Projects</h4>
+                <ul class="space-y-2">
+                    <li><a href="projects.html#residential" class="hover:text-gray-600 transition">Residential</a></li>
+                    <li><a href="projects.html#commercial" class="hover:text-gray-600 transition">Commercial</a></li>
+                    <li><a href="projects.html#custom" class="hover:text-gray-600 transition">Custom Projects</a></li>
+                    <li><a href="projects.html" class="hover:text-gray-600 transition">All Projects</a></li>
+                </ul>
+            </div>
+
+            <!-- COLUMN 4: Contact -->
+            <div>
+                <h4 class="font-semibold text-lg mb-4">Contact</h4>
+                <p class="mb-2">
+                    <i class="fas fa-phone mr-2"></i> 079 470 2549/064 403 8546
+                </p>
+                <p class="mb-2">
+                    <i class="fas fa-envelope mr-2"></i> kubumartin240@gmail.com
+                </p>
+                <p>
+                    <i class="fas fa-map-marker-alt mr-2"></i> Western Cape, South Africa
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Bottom Copyright -->
+        <div class="border-t border-gray-200 mt-12 pt-6 text-center text-gray-500 text-sm">
+            &copy; 2026 Africon Carpentry Solutions. All rights reserved.
+        </div>
+
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
